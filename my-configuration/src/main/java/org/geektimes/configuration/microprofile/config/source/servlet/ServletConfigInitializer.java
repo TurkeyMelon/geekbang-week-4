@@ -1,5 +1,7 @@
 package org.geektimes.configuration.microprofile.config.source.servlet;
 
+import org.geektimes.configuration.microprofile.config.servlet.ConfigServletRequestListener;
+
 import javax.servlet.ServletContainerInitializer;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -12,5 +14,6 @@ public class ServletConfigInitializer implements ServletContainerInitializer {
         // 增加 ServletContextListener
         System.out.println("ServletConfigInitializer running");
         servletContext.addListener(ServletContextConfigInitializer.class);
+        servletContext.addListener(ConfigServletRequestListener.class);
     }
 }

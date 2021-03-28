@@ -11,7 +11,7 @@ java -jar .\user-web\target\user-web-v1-SNAPSHOT-war-exec.jar
 
 运行成功后，可访问 http://localhost:8080/config 获取 ServletContext 的配置参数
 
-访问 http://localhost:8080/rest-config 可通过封装的ThreadLocal中的request获取配置参数，可扩展为支持存储多种属性的 RequestAttributes，待进一步扩展。
+访问 http://localhost:8080/rest-config 可通过封装的ThreadLocal中的config获取配置参数
 
 my-dependency-injection/my-configuration模块均已独立
 
